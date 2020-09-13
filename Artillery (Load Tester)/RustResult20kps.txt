@@ -1,0 +1,34 @@
+(Tries to send 20000 requests per second)
+(Code has been compiled for release)
+
+Report @ 11:04:21(+0200) 2020-09-13
+Elapsed time: 7 minutes, 9 seconds
+  Scenarios launched:  3995
+  Scenarios completed: 4001
+  Requests completed:  4001
+  Mean response/sec: 462.08
+  Response time (msec):
+    min: 1
+    max: 45.7
+    median: 8
+    p95: 11.7
+    p99: 19.3
+  Codes:
+    200: 4001
+
+All virtual users finished
+Summary report @ 11:04:22(+0200) 2020-09-13
+  Scenarios launched:  200000
+  Scenarios completed: 200000
+  Requests completed:  200000
+  Mean response/sec: 465.41
+  Response time (msec):
+    min: 1
+    max: 312.5
+    median: 8.2
+    p95: 13.1
+    p99: 20.6
+  Scenario counts:
+    0: 200000 (100%)
+  Codes:
+    200: 200000

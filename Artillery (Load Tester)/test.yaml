@@ -1,0 +1,10 @@
+config:
+  target: "http://localhost:8000/api/generator"
+  phases:
+    - duration: 10
+      arrivalRate: 20000
+scenarios:
+  - flow:
+      - log: "Creating a new request!"
+      - get:
+          url: "/key?length=64"
