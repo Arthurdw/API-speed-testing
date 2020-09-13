@@ -169,7 +169,7 @@ Rust: CRASH
 
 ## Results
 
-The results from the character generation are definitely shocking, I expected Rust to be faster in all of them, uet this was not the case. Rust did handle server side progressing better yet its standard response time is around 200ms.  
+The results from the character generation are definitely shocking, I expected Rust to be faster in all of them, yet this was not the case. Rust did handle server side progressing better yet its standard response time is around 200ms.  
 The latest tests (character generation) were performed using Insomnia.  
 
 Rust does perform better for enterprise applications as we can see by the stress test.
