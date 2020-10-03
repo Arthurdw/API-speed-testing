@@ -12,6 +12,7 @@ If you want to see all the specific outputs you can find it in the `Artillery (L
 ```js
 JavaScript: 7 minutes, 42 seconds
 Rust: 7 minutes, 9 seconds
+Python: 8 minutes, 22 seconds
 ```
 
 #### Requests
@@ -21,6 +22,7 @@ Rust: 7 minutes, 9 seconds
 ```js
 JavaScript: 200000
 Rust: 200000
+Python: 392
 ```
 
 ##### Average requests handled per second
@@ -28,15 +30,17 @@ Rust: 200000
 ```js
 JavaScript: 431.82
 Rust: 465.41
+Python: 0.7
 ```
 
 ##### Response times
-
+ 
 ###### Minimum response time (msec)
 
 ```js
 JavaScript: 1.2
 Rust: 1
+Python: 9.6
 ```
 
 ###### Maximum response time (msec)
@@ -44,6 +48,7 @@ Rust: 1
 ```js
 JavaScript: 183.6
 Rust: 312.5
+Python: 2205
 ```
 
 ###### Median response time (msec)
@@ -51,6 +56,7 @@ Rust: 312.5
 ```js
 JavaScript: 9
 Rust: 8.2
+Python: 664.6
 ```
 
 ## Letting it generate big tokens
@@ -173,3 +179,5 @@ The results from the character generation are definitely shocking, I expected Ru
 The latest tests (character generation) were performed using Insomnia.  
 
 Rust does perform better for enterprise applications as we can see by the stress test.
+
+& don't make heavy used API's in Python :3
