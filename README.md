@@ -10,10 +10,11 @@ If you want to see all the specific outputs you can find it in the `Artillery (L
 #### Total elapsed time
 
 ```js
+Rust (Rocket): 7 minutes, 9 seconds
 JavaScript: 7 minutes, 42 seconds
-Rust: 7 minutes, 9 seconds
 Python: 8 minutes, 22 seconds
 Go: 8 minutes, 45 seconds
+Rust (tower-web): 6 minutes 13 seconds
 ```
 
 #### Requests
@@ -22,18 +23,20 @@ Go: 8 minutes, 45 seconds
 
 ```js
 JavaScript: 200000
-Rust: 200000
+Rust (Rocket): 200000
 Python: 392
 Go: 16312
+Rust (tower-web): 16269
 ```
 
 ##### Average requests handled per second
 
 ```js
 JavaScript: 431.82
-Rust: 465.41
+Rust (Rocket): 465.41
 Python: 0.7
 Go: 380.34
+Rust (tower-web): 536.24
 ```
 
 ##### Response times
@@ -42,27 +45,30 @@ Go: 380.34
 
 ```js
 JavaScript: 1.2
-Rust: 1
+Rust (Rocket): 1
 Python: 9.6
 Go: 5
+Rust (tower-web): 4
 ```
 
 ###### Maximum response time (msec)
 
 ```js
 JavaScript: 183.6
-Rust: 312.5
+Rust (Rocket): 312.5
 Python: 2205
 Go: 2331.3
+Rust (tower-web): 133.7
 ```
 
 ###### Median response time (msec)
 
 ```js
 JavaScript: 9
-Rust: 8.2
+Rust (Rocket): 8.2
 Python: 664.6
 Go: 13.6
+Rust (tower-web): 8.4
 ```
 
 ## Letting it generate big tokens
@@ -76,72 +82,81 @@ All our data is displayed in milliseconds.
 
 ```js
 JavaScript: 1.32
-Rust: 203
+Rust (Rocket): 203
 Go: 0.64
+Rust (tower-web): 0.48
 ```
 
 #### 128 characters
 
 ```js
 JavaScript: 1.87
-Rust: 203
+Rust (Rocket): 203
 Go: 0.7
+Rust (tower-web): 0.48
 ```
 
 #### 256 characters
 
 ```js
 JavaScript: 1.17
-Rust: 204
+Rust (Rocket): 204
 Go: 0.75
+Rust (tower-web): 0.45
 ```
 
 #### 512 characters
 
 ```js
 JavaScript: 1.24
-Rust: 204
+Rust (Rocket): 204
 Go: 0.77
+Rust (tower-web): 0.52
 ```
 
 #### 1 024 characters
 
 ```js
 JavaScript: 1.20
-Rust: 206
+Rust (Rocket): 206
 Go: 2.63
+Rust (tower-web): 0.54
 ```
 
 #### 2 048 characters
 
 ```js
 JavaScript: 1.48
-Rust: 201
+Rust (Rocket): 201
 Go: 4.01
+Rust (tower-web): 0.51
 ```
 
 #### 4 096 characters
 
 ```js
 JavaScript: 2.37
-Rust: 204
+Rust (Rocket): 204
 Go: 5.77
+Rust (tower-web): 0.65
 ```
 
 #### 8 192 characters
 
 ```js
 JavaScript: 2.29
-Rust: 203
+Rust (Rocket): 203
 Go: 18.7
+Rust (tower-web): 0.67
 ```
 
 #### 16 384 characters
 
 ```js
 JavaScript: 4.43
-Rust: 214
+Rust (Rocket): 214
 Go: 57
+Rust (tower-web): 0.73
 ```
 
 ### Even bigger tokens
@@ -150,56 +165,64 @@ Go: 57
 
 ```js
 JavaScript: 20
-Rust: 221
+Rust (Rocket): 221
 Go: 4269.65
+Rust (tower-web): 4.7
 ```
 
 #### 500 000 characters
 
 ```js
 JavaScript: 92
-Rust: 217
+Rust (Rocket): 217
 Go: 116775.545
+Rust (tower-web): 8.91
 ```
 
 #### 1 000 000 characters
 
 ```js
 JavaScript: 219
-Rust: 246
+Rust (Rocket): 246
 Go: 226980.849
+Rust (tower-web): 19.7
 ```
 
 #### 100 000 000 characters
 
 ```js
 JavaScript: CRASH
-Rust: 3621
+Rust (Rocket): 3621
 Go: NO RESPONSE
+Rust (tower-web): 1480
 ```
 
 #### 1 000 000 000 characters
 
 ```js
 JavaScript: CRASH
-Rust: 34985
+Rust (Rocket): 34985
 Go: NO RESPONSE
+Rust (tower-web): 17355
 ```
 
 #### 1 000 000 000 000 characters
 
 ```js
 JavaScript: CRASH
-Rust: CRASH
+Rust (Rocket): CRASH
 Go: NO RESPONSE
+Rust (tower-web): CRASH (mem allocation failed)
 ```
 
 ## Results
 
-The results from the character generation are definitely shocking, I expected Rust to be faster in all of them, yet this was not the case. Rust did handle server side progressing better yet its standard response time is around 200ms.  
+The results from the character generation are definitely shocking, I expected Rust to be faster in all of them, yet this was not the case. Rust (Rocket) did handle server side progressing better yet its standard response time is around 200ms.  
 The latest tests (character generation) were performed using Insomnia.  
 
-Rust does perform better for enterprise applications as we can see by the stress test.
+Rust (Rocket) does perform better for enterprise applications as we can see by the stress test.
+
+Rust (tower-web) is amazing for its speed and can definitly be used for big API's.
 
 GO is an excellent solution for fast non intensive server processing. Yet Rust would be the better option for more heavy server sided processing. 
 
